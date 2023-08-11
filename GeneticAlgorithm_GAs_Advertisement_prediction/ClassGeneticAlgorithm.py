@@ -2,8 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-
-
 class GeneticAlgorithm():
     def __init__(self,feature_Xb_,label_Y_,number_of_gene_,number_of_chromosome_,number_of_generation_,etilism_,cross_value_,mutation_rate_,bound_):
         self.feature_Xb_                =   feature_Xb_            
@@ -96,7 +94,7 @@ class GeneticAlgorithm():
         print(f'The best loss       =   {lst_best_loss_[-1]}')
         print(f'The best chromosome =   {best_individual_}')
         plt.xlabel('Generation No.')
-        plt.ylabel('Best Fitness(R) and Best Loss(B)')
+        plt.ylabel('Best Fitness(Red) and Best Loss(Blue)')
         plt.plot(lst_number_of_generation_,lst_best_fitness_,color='red')
         plt.plot(lst_number_of_generation_,lst_best_loss_,color='blue')
         plt.show()
