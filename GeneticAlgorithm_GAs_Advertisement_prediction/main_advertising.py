@@ -16,7 +16,7 @@ def getData(data_path_, number_of_chromosome_):
 
 
 
-data_path               =   'E:/AIO_2023/GeneticAlgorithm_GAs_Advertisement_prediction/advertising.csv'
+data_path               =   'GeneticAlgorithm_GAs_Advertisement_prediction/advertising.csv'
 number_of_gene          =   4
 number_of_chromosome    =   150
 number_of_generation    =   500
