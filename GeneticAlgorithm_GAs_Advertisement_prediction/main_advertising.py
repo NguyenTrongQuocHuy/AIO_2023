@@ -19,7 +19,7 @@ def getData(data_path_, number_of_chromosome_):
 data_path               =   'GeneticAlgorithm_GAs_Advertisement_prediction/advertising.csv'
 number_of_gene          =   4
 number_of_chromosome    =   150
-number_of_generation    =   5000
+number_of_generation    =   800
 etilism                 =   2
 cross_value             =   0.5
 mutation_rate           =   0.05
