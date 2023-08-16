@@ -104,4 +104,12 @@ def rating_group(rating_):
 rating_group_column    =   data_indexed['Rating'].apply(rating_group)
 print(rating_group_column)
 data_indexed.insert(data_indexed.shape[1],'rating_group',rating_group_column)
-print(data_indexed)
+
+#________________________________________________________________________________________________
+data_director_mtscore   =   data_indexed[['Director','Metascore']]
+data_director_mtscore   =   data_director_mtscore.groupby('Director').mean()
+print(data_director_mtscore)
+fig,ax                  =   plt.subplots()
+ax.plot(data_director_mtscore.index, data_director_mtscore['Metascore'], c='cyan', lw=1)
+plt.show()
+
