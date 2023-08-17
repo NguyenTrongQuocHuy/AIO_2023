@@ -38,3 +38,28 @@ print(f'The datatype of each column are\n {occupation_data.dtypes}')
 print(f'The occupation column is', occupation_data.occupation)
 
 #______________________________________________Step 12. How many different occupations are in this dataset?_______________________________
+#solution1
+print(f'there are {len(set(occupation_data.occupation))} occupations in the dataset')
+#solution2
+print(f'there are {occupation_data.occupation.nunique()} occupations in the dataset')
+
+#______________________________________________Step 13. What is the most frequent occupation?_____________________________________________
+lst_freq_in_occupation          =   occupation_data.occupation.value_counts()
+the_most_freq_in_occupation     =   lst_freq_in_occupation.head(1)
+print(f'The most frequent occupation is {the_most_freq_in_occupation.index[0]}, it has {the_most_freq_in_occupation[0]} times')
+
+#______________________________________________Step 14. Summarize the DataFrame.__________________________________________________________
+print(occupation_data.describe()) #notice: by default only numeric column is/are returned
+
+#______________________________________________Step 15. Summarize all the columns_________________________________________________________
+print(occupation_data.describe(include = 'all')) #notice: if include all, all columns is/are returned
+
+#______________________________________________Step 16. Summarize only the occupation column______________________________________________
+print(occupation_data.occupation.describe())
+
+#______________________________________________Step 17. What is the mean age of users?____________________________________________________
+print(f'The mean age of user is {occupation_data.age.mean()} yo')
+
+#______________________________________________Step 18. What is the age with least occurrence?____________________________________________
+least_freq_age             =   occupation_data.age.value_counts().tail() #tail in default will select 5 bottoms
+print(f'The age with least occurrence is/are {least_freq_age.index[0]}')
